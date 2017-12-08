@@ -1,7 +1,7 @@
 cordova-plugin-updateapp
 =========
 
-基于cordova插件形式开发的版本升级插件，支持android和iOS。
+基于cordova插件形式开发的版本升级插件，支持iOS，android还有些bug不好用。
 
 说明：
 ========
@@ -12,7 +12,7 @@ cordova-plugin-updateapp
 
 安装：
 ========
-1. `cordova plugin add https://github.com/south-pacific/cordova-plugin-updateapp.git`
+1. `cordova plugin add http://gogs.haiyin.me/Infrastructure_Group/cordova-plugin-updateapp.git`
 2. `cordova build android` 或者 `cordova build ios`
 3. 在服务器上放置版本信息文件`androidVersion.json` 或者 `iosVersion.json`
 

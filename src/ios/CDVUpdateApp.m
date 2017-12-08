@@ -12,7 +12,7 @@ NSString *ipaPath;
         
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:version];
         
-        [self.commandDelegate evalJs:[pluginResult toSuccessCallbackString:command.callbackId]];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }];
 }
 
@@ -23,7 +23,7 @@ NSString *ipaPath;
         
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:version];
         
-        [self.commandDelegate evalJs:[pluginResult toSuccessCallbackString:command.callbackId]];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }];
 }
 
@@ -38,13 +38,13 @@ NSString *ipaPath;
         if (resultDic == nil) {
             CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"error"];
             
-            [self.commandDelegate evalJs:[pluginResult toErrorCallbackString:command.callbackId]];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         } else {
             NSString *lastVersion = [resultDic objectForKey:@"verName"];
             
             CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:lastVersion];
             
-            [self.commandDelegate evalJs:[pluginResult toSuccessCallbackString:command.callbackId]];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }
     }];
 }

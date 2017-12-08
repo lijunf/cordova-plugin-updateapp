@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.qinsilk.updateapp"
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-updateapp"
     version="1.1.0">
 
     <name>UpdateApp</name>
@@ -19,11 +18,11 @@
     </js-module>
 
     <!-- android -->
-    <platform name="android">
+    <!--<platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="UpdateApp">
                 <param name="android-package" value="com.phonegap.plugins.updateapp.UpdateApp"/>
-            </feature>   
+            </feature>
         </config-file>
         <source-file src="src/android/UpdateApp.java" target-dir="src/com/phonegap/plugins/updateapp" />
         <source-file src="src/android/softupdate_progress.xml" target-dir="res/layout"/>
@@ -37,7 +36,7 @@
             <string name="soft_updating">正在更新</string>
             <string name="soft_update_cancel">取消</string>
         </config-file>
-    </platform>
+    </platform>-->
 
     <!-- ios -->
     <platform name="ios">
